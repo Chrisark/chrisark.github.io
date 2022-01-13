@@ -39,6 +39,34 @@ h6{
     font-weight: 800;
 }
 
+.chris-pizza{
+    display: grid;
+    min-height: 30em;
+    align-content: center;
+    line-height: 3px;
+    font-weight: 800;
+}
+
+#pie_chart{
+    display: grid;
+    align-content: center;
+    width: 1000px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+#affinity{
+    align-items: flex-start;
+    width: 1500px;
+    padding-top: 50px;
+    margin-right: 500px;
+}
+
+.return-home{
+    display:grid;
+    min-height: 1em;
+}
+
 .design-title{
     font-family: 'Poppins', sans-serif;   
     display:grid;
@@ -51,8 +79,13 @@ h6{
 .chris-title{
     color:rgb(241, 241, 241);
     font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;}
+
+.chris-title2{
+    color:rgb(241, 241, 241);
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    position: relative;
+    background-image: url(images/Screen\ Shot\ 2022-01-13\ at\ 12.51.06\ PM.png);
 }
 
 h2, span{
@@ -107,6 +140,13 @@ h6 {font-size: 16px;}
 }
 
 .s3{
+    background-image:linear-gradient(to right,#3c31dd,#3198dd) ;
+    color:rgb(251,249,243,0.8);
+    overflow: auto;
+    
+}
+
+.s4{
     background-image:linear-gradient(to right,#3c31dd,#3198dd) ;
     color:rgb(251,249,243,0.8);
     overflow: auto;
@@ -292,15 +332,14 @@ h6 {font-size: 16px;}
     border-radius: 30px;
     padding-left: 15px;
     padding-right: 5px;
+    background: rgba(153, 121, 240, 0.973);
 }
 
 .projects{
     border-radius: 30px;
     text-align: center;
-    
+    background: rgba(153, 121, 240, 0.973);
 }
-
-
 
 #skills{
     margin-left: 60px;
@@ -315,6 +354,20 @@ h6 {font-size: 16px;}
     display: flex;
     justify-content: space-evenly;
     padding-right: 30px;
+}
+
+.pats{
+    text-align: center;
+}
+
+#pats-left{
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.pats-right{
+    display:grid;
 }
 
 @media screen and (max-width: 1200px) {
