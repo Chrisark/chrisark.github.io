@@ -154,7 +154,7 @@ h6 {font-size: 16px;}
 }
 
 .main-container{
-    width: 1200px;
+    width: 1600px;
     margin: 0 auto;
 }
 
@@ -327,12 +327,18 @@ h6 {font-size: 16px;}
     gap:100px;
 }
 
-.about-me{
+.about-me-left{
     text-align: left;
     border-radius: 30px;
     padding-left: 15px;
     padding-right: 5px;
-    background: rgba(153, 121, 240, 0.973);
+}
+
+.about-me-right{
+    text-align: left;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
 .projects{
@@ -360,10 +366,21 @@ h6 {font-size: 16px;}
     text-align: center;
 }
 
+.nexus{
+    text-align: center;
+    padding-right: 100px;
+}
+
 #pats-left{
     width: 450px;
     height: 400px;
     object-fit: cover;
+}
+
+#nexus-left{
+    width: 700px;
+    height: 500px;
+    padding-right: 1000px;
 }
 
 .pats-right{
@@ -372,8 +389,6 @@ h6 {font-size: 16px;}
 
 @media screen and (max-width: 1200px) {
     .intro-wrapper{
-            background: var(--secondaryColor);
-            border: 1px solid var(--borderColor);
             border-radius: 6px 6px 0 0;
         
             display: grid;
@@ -386,6 +401,27 @@ h6 {font-size: 16px;}
     }
 
     .right-column{
+        justify-content: center;
+    }
+
+    .chris{
+        justify-content: center;
+    }
+
+    .about-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'about-me-left'
+            'about-me-right'
+        ;
+    }
+
+    .about-me-left{
+        justify-content: center;
+    }
+
+    .about-me-right{
         justify-content: center;
     }
 }
