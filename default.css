@@ -17,12 +17,18 @@
 html, body{
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h3, h4, h5, h6, strong{
     color: var(--mainText);
     font-family: 'Poppins', sans-serif;   
     font-weight: 600;
+}
+
+
+section{
+    overflow-x: hidden;
 }
 
 h6{
@@ -105,11 +111,7 @@ p, input, label, input, textarea{
 }
 
 /* removing underline from links */
-a{
-    text-decoration: none;
-    color:#fff;
-    
-}
+
 
 
 
@@ -118,7 +120,11 @@ ul{
     list-style: none;
 }
 
-
+a{
+    text-decoration: none;
+    color:#fff;
+    
+}
 
 h1 {font-size: 70px; line-height: 70px;}
 h2 {font-size: 50px;}
@@ -154,7 +160,7 @@ h6 {font-size: 16px;}
 }
 
 .main-container{
-    width: 1600px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -210,7 +216,8 @@ h6 {font-size: 16px;}
     display:grid;
     padding-top: 50px;
     padding-bottom: 50px;
-    align-content: center;
+    justify-content: center;
+    margin-left: 100px;
 }
 
 #profile_pic{
@@ -220,39 +227,46 @@ h6 {font-size: 16px;}
     width: 300px;
     margin-top: 10px;
     
-    border:4px solid rgba(255, 157, 44, 0.973);
+    border:4px solid #FFC09F;
+    justify-content: center;
 
 }
 
 .picture-contact{
     text-align:center;
-    padding-right: 45px;
     margin-bottom: 60px;
 }
 
-.btn{
-    width: 175px;
+
+
+.btn a:link, a:visited{
+    width: 300px;
     height: 50px;
-    background-color: rgba(255, 157, 44, 0.973);
-    color:black;
+    background-color: #FFC09F;
     margin-left: 40px;
     border:none;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    padding: 10px 20px;
 }
 
-.btn:hover{
-    font-size: 90%;
-    background-color:rgba(153, 121, 240, 0.973);
+
+.btn a:hover, a:active{
+    background-color: #fff;
+    color:#FFC09F;
+    border:2px solid #FFC09F;
 }
+
 
 .right-column{
     grid-area: right-column;
     display: grid;
-    align-content: center;
+    justify-content: center;
     padding-top: 50px;
     padding-bottom: 100px;
-    padding-right: 70px;
+    margin-right: 100px;
+
 }
 
 #preview-shadow{
@@ -266,7 +280,7 @@ h6 {font-size: 16px;}
 #preview{
     width:350px;
     height: 240px;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid #FFC09F;
     background-color: var(--previewBG);
     padding-left: 15px;
     position: relative;
@@ -277,7 +291,7 @@ h6 {font-size: 16px;}
 #preview2{
     width:350px;
     height: 240px;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid #FFC09F;
     background-color: var(--previewBG);
     padding-left: 15px;
     padding-right: 10px;
@@ -291,7 +305,7 @@ h6 {font-size: 16px;}
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid #FFC09F;
     background-color: #fff; 
     position: absolute;
 }
@@ -320,25 +334,26 @@ h6 {font-size: 16px;}
     
 }
 
-.about-wrapper{
+/* .about-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-bottom: 50px;
     gap:100px;
-}
+} */
 
 .about-me-left{
-    text-align: left;
-    border-radius: 30px;
-    padding-left: 15px;
-    padding-right: 5px;
+    grid-area: left-column;
+    display: grid;
+    justify-content: center;
+    margin-left: 100px;
 }
 
 .about-me-right{
+    grid-area: right-column;
+    display: grid;
+    justify-content: center;
     text-align: left;
-    border-radius: 30px;
-    padding-left: 15px;
-    padding-right: 5px;
+    margin-right: 100px;
 }
 
 .projects{
@@ -380,7 +395,6 @@ h6 {font-size: 16px;}
 #nexus-left{
     width: 700px;
     height: 500px;
-    padding-right: 1000px;
 }
 
 .pats-right{
@@ -400,6 +414,11 @@ h6 {font-size: 16px;}
             ;
     }
 
+    .left-column{
+        align-content: center;
+        margin-right: 20px;
+    }
+
     .right-column{
         justify-content: center;
     }
@@ -415,6 +434,8 @@ h6 {font-size: 16px;}
             'about-me-left'
             'about-me-right'
         ;
+        width: 100%;
+        height: 100%;
     }
 
     .about-me-left{
@@ -422,6 +443,16 @@ h6 {font-size: 16px;}
     }
 
     .about-me-right{
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nexus-left{
+        width: 100%;
+        height: 100%
+    }
+    
+    #profile_pic{
         justify-content: center;
     }
 }
