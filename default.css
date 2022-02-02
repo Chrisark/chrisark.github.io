@@ -85,13 +85,11 @@ h6{
 .chris-title{
     color:rgb(241, 241, 241);
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;}
+}
 
 .chris-title2{
-    color:rgb(241, 241, 241);
+    color:#FFC09F;
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    background-image: url(images/Screen\ Shot\ 2022-01-13\ at\ 12.51.06\ PM.png);
 }
 
 h2, span{
@@ -126,11 +124,11 @@ a{
     
 }
 
-h1 {font-size: 70px; line-height: 70px;}
+h1 {font-size: 70px; line-height: 75px;}
 h2 {font-size: 50px;}
 h3 {font-size: 28px;}
 h4 {font-size: 24px; line-height: 35px;}
-h5 {font-size: 20px; line-height: 3px;}
+h5 {font-size: 20px;}
 h6 {font-size: 16px;}
 
 .s1{
@@ -182,7 +180,6 @@ h6 {font-size: 16px;}
     grid-template-areas:
         'left-column right-column'
     ;
-    gap: 50px;
 }
 
 /* .intro-curve {
@@ -214,10 +211,7 @@ h6 {font-size: 16px;}
 .left-column{
     grid-area: left-column;
     display:grid;
-    padding-top: 50px;
-    padding-bottom: 50px;
     justify-content: center;
-    margin-left: 100px;
 }
 
 #profile_pic{
@@ -243,7 +237,6 @@ h6 {font-size: 16px;}
     width: 300px;
     height: 50px;
     background-color: #FFC09F;
-    margin-left: 40px;
     border:none;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
@@ -263,9 +256,7 @@ h6 {font-size: 16px;}
     grid-area: right-column;
     display: grid;
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    margin-right: 100px;
+    position: relative;
 
 }
 
@@ -288,6 +279,18 @@ h6 {font-size: 16px;}
     
 }
 
+#preview3{
+    width:350px;
+    height: 240px;
+    border: 1.5px solid #FFC09F;
+    background-color: var(--previewBG);
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.6;
+    
+}
+
+
 #preview2{
     width:350px;
     height: 240px;
@@ -297,7 +300,6 @@ h6 {font-size: 16px;}
     padding-right: 10px;
     position: relative;
     line-height: 1.6;
-    margin-left:85px;
     margin-top: 10px;
 }
 
@@ -345,7 +347,6 @@ h6 {font-size: 16px;}
     grid-area: left-column;
     display: grid;
     justify-content: center;
-    margin-left: 100px;
 }
 
 .about-me-right{
@@ -353,7 +354,6 @@ h6 {font-size: 16px;}
     display: grid;
     justify-content: center;
     text-align: left;
-    margin-right: 100px;
 }
 
 .projects{
@@ -392,6 +392,12 @@ h6 {font-size: 16px;}
     object-fit: cover;
 }
 
+#typography {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+}
+
 #nexus-left{
     width: 700px;
     height: 500px;
@@ -401,9 +407,12 @@ h6 {font-size: 16px;}
     display:grid;
 }
 
+@media screen {
+    
+}
+
 @media screen and (max-width: 1200px) {
     .intro-wrapper{
-            border-radius: 6px 6px 0 0;
         
             display: grid;
             grid-template-columns: 1fr;
@@ -412,17 +421,14 @@ h6 {font-size: 16px;}
                 'left-column'
                 'right-column'
             ;
+            justify-content: center;
+            width:100%;
     }
 
     .left-column{
-        align-content: center;
-        margin-right: 20px;
-    }
-
-    .right-column{
         justify-content: center;
+        
     }
-
     .chris{
         justify-content: center;
     }
@@ -438,8 +444,11 @@ h6 {font-size: 16px;}
         height: 100%;
     }
 
+    
+
     .about-me-left{
         justify-content: center;
+        width:100%;
     }
 
     .about-me-right{
@@ -447,12 +456,115 @@ h6 {font-size: 16px;}
         justify-content: center;
     }
 
-    #nexus-left{
-        width: 100%;
-        height: 100%
-    }
-    
     #profile_pic{
         justify-content: center;
     }
+
+    .s1{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    #pats-left{
+        width:70%;
+        height:auto;
+        margin-left: 70px;
+    }
+    
+    #nexus-left{
+        width:65%;
+        height:auto;
+        margin-left: 10px;
+    }
+
+    .about-me-left{
+        max-width:90%;
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 520px){
+
+    .chris{
+        font-size: 10px;
+    }
+
+    .chris-title{
+        font-size: 40px;
+    }
+
+    .chris-title2{
+        font-size: 35px;
+        line-height: 1em;
+    }
+
+    .preview{
+        width:8%;
+        height:100%;
+    }
+
+    .right-column{
+        justify-content: center;
+        font-size: 100%;
+        
+    }
+
+    #preview2{
+        margin-right:50px;
+    }
+
+    .s1{
+        width:100%;
+    }
+
+    #preview-shadow{
+        width:250px;
+        height:200px;
+    }
+
+    #preview{
+        font-size: 14px;
+        width:250px;
+        height: 200px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+
+    #preview2{
+        font-size: 14px;
+        padding-right: 20px;
+        height: 200px;
+        width: 250px;
+    }
+
+    #preview3{
+        width: 300px;
+        height: 175px;
+
+    }
+
+    .about-me-left{
+        font-size: 14px;
+    }
+
+    .about-me-right{
+        padding-right: 25px;
+        font-size: 14px;
+    }
+
+    #typography{
+        width:90%;
+        height: 90%;
+
+    }
+
+    #nexus-left{
+        width: 100%;
+        height: 100%;
+    }
+  
 }
