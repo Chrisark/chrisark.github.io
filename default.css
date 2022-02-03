@@ -17,12 +17,18 @@
 html, body{
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h3, h4, h5, h6, strong{
     color: var(--mainText);
     font-family: 'Poppins', sans-serif;   
     font-weight: 600;
+}
+
+
+section{
+    overflow-x: hidden;
 }
 
 h6{
@@ -71,21 +77,19 @@ h6{
     font-family: 'Poppins', sans-serif;   
     display:grid;
     text-align:center;
-    margin-top: 40px;
-    padding-bottom: 50px;
+    margin-top: 20px;
+    padding-bottom: 0px;
 
 }
 
 .chris-title{
     color:rgb(241, 241, 241);
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;}
+}
 
 .chris-title2{
-    color:rgb(241, 241, 241);
+    color:#FFC09F;
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    background-image: url(images/Screen\ Shot\ 2022-01-13\ at\ 12.51.06\ PM.png);
 }
 
 h2, span{
@@ -105,38 +109,39 @@ p, input, label, input, textarea{
 }
 
 /* removing underline from links */
-a{
-    text-decoration: none;
-    color:#fff;
-    
-}
+
 
 
 
 /* removing bullets from list */
 ul{
     list-style: none;
+    padding-right: 150px;
 }
 
+a{
+    text-decoration: none;
+    color:#fff;
+    
+}
 
-
-h1 {font-size: 70px; line-height: 70px;}
-h2 {font-size: 50px;}
+h1 {font-size: 70px; line-height: 75px; margin-bottom: 20px}
+h2 {font-size: 50px; margin-bottom: 40px; margin-top: 40px}
 h3 {font-size: 28px;}
 h4 {font-size: 24px; line-height: 35px;}
-h5 {font-size: 20px; line-height: 3px;}
+h5 {font-size: 20px;}
 h6 {font-size: 16px;}
 
 .s1{
     background-image:linear-gradient(to right,#3c31dd,#3198dd) ;
     overflow: auto;
-    min-height: 300px;
     
 }
 
 .s2{
     background-image:linear-gradient(to right,#3c31dd,#3198dd) ;
-    overflow: auto;
+    overflow: hidden;
+    height:hidden;
 }
 
 .s3{
@@ -154,7 +159,7 @@ h6 {font-size: 16px;}
 }
 
 .main-container{
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -176,7 +181,14 @@ h6 {font-size: 16px;}
     grid-template-areas:
         'left-column right-column'
     ;
-    gap: 50px;
+}
+
+.intro-wrapper2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'about-me-left about-me-right'
+    ;
 }
 
 /* .intro-curve {
@@ -208,9 +220,7 @@ h6 {font-size: 16px;}
 .left-column{
     grid-area: left-column;
     display:grid;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    align-content: center;
+    justify-content: center;
 }
 
 #profile_pic{
@@ -220,39 +230,43 @@ h6 {font-size: 16px;}
     width: 300px;
     margin-top: 10px;
     
-    border:4px solid rgba(255, 157, 44, 0.973);
+    border:4px solid #FFC09F;
+    justify-content: center;
 
 }
 
 .picture-contact{
     text-align:center;
-    padding-right: 45px;
     margin-bottom: 60px;
 }
 
-.btn{
-    width: 175px;
+
+
+.btn a:link, a:visited{
+    width: 300px;
     height: 50px;
-    background-color: rgba(255, 157, 44, 0.973);
-    color:black;
-    margin-left: 40px;
+    background-color: #FFC09F;
     border:none;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    padding: 10px 20px;
 }
 
-.btn:hover{
-    font-size: 90%;
-    background-color:rgba(153, 121, 240, 0.973);
+
+.btn a:hover, a:active{
+    background-color: #fff;
+    color:#FFC09F;
+    border:2px solid #FFC09F;
 }
+
 
 .right-column{
     grid-area: right-column;
     display: grid;
-    align-content: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    padding-right: 70px;
+    justify-content: center;
+    position: relative;
+
 }
 
 #preview-shadow{
@@ -266,7 +280,7 @@ h6 {font-size: 16px;}
 #preview{
     width:350px;
     height: 240px;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid #FFC09F;
     background-color: var(--previewBG);
     padding-left: 15px;
     position: relative;
@@ -274,16 +288,27 @@ h6 {font-size: 16px;}
     
 }
 
+#preview3{
+    width:350px;
+    height: 240px;
+    border: 1.5px solid #FFC09F;
+    background-color: var(--previewBG);
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.6;
+    
+}
+
+
 #preview2{
     width:350px;
     height: 240px;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid #FFC09F;
     background-color: var(--previewBG);
     padding-left: 15px;
     padding-right: 10px;
     position: relative;
     line-height: 1.6;
-    margin-left:85px;
     margin-top: 10px;
 }
 
@@ -291,7 +316,7 @@ h6 {font-size: 16px;}
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid #FFC09F;
     background-color: #fff; 
     position: absolute;
 }
@@ -320,44 +345,35 @@ h6 {font-size: 16px;}
     
 }
 
-.about-wrapper{
+/* .about-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-bottom: 50px;
     gap:100px;
-}
+} */
 
-.about-me{
-    text-align: left;
-    border-radius: 30px;
-    padding-left: 15px;
-    padding-right: 5px;
-    background: rgba(153, 121, 240, 0.973);
-}
-
-.projects{
-    border-radius: 30px;
+.about-me-left{
+    grid-area: about-me-left;
+    display: grid;
+    justify-content: center;
     text-align: center;
-    background: rgba(153, 121, 240, 0.973);
 }
 
-#skills{
-    margin-left: 60px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    padding-right: 100px;
-    
+.about-me-right{
+    grid-area: about-me-right;
+    display: grid;
+    justify-content: center;
+    text-align: left;
 }
 
-#work{
-    display: flex;
-    justify-content: space-evenly;
-    padding-right: 30px;
-}
 
 .pats{
     text-align: center;
+}
+
+.nexus{
+    text-align: center;
+    padding-right: 100px;
 }
 
 #pats-left{
@@ -366,15 +382,23 @@ h6 {font-size: 16px;}
     object-fit: cover;
 }
 
+#typography {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+}
+
+#nexus-left{
+    width: 700px;
+    height: 500px;
+}
+
 .pats-right{
     display:grid;
 }
 
 @media screen and (max-width: 1200px) {
     .intro-wrapper{
-            background: var(--secondaryColor);
-            border: 1px solid var(--borderColor);
-            border-radius: 6px 6px 0 0;
         
             display: grid;
             grid-template-columns: 1fr;
@@ -383,9 +407,188 @@ h6 {font-size: 16px;}
                 'left-column'
                 'right-column'
             ;
+            justify-content: center;
+            width: 100%;
+    }
+
+    .intro-wrapper2{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'about-me-left'
+            'about-me-right'
+        ;
+        justify-content: center;
+}
+
+    .about-me-left{
+        height: 100%;
+    }
+
+    .about-me-right{
+        height:100%;
+    }
+
+    .left-column{
+        justify-content: center;
+        
+    }
+    .chris{
+        justify-content: center;
+    }
+
+    .about-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'about-me-left'
+            'about-me-right'
+        ;
+        width: 100%;
+        height: 100%;
+    }
+
+    #profile_pic{
+        justify-content: center;
+    }
+
+    .s1{
+        width:100%;
+    }
+
+    ul{
+        list-style: none;
+        padding-right: 60px;
+    }
+
+    .s2{
+        height:100%;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    #pats-left{
+        width:70%;
+        height:auto;
+        margin-left: 70px;
+    }
+    
+    #nexus-left{
+        width:85%;
+        height:auto;
+        margin-left: 20px;
+    }
+
+    .about-me-left{
+        height:auto;
+    }
+
+    #profile_pic{
+        width:300px;
+        height:auto;
+    }
+    
+}
+
+@media screen and (max-width: 520px){
+
+    #profile_pic{
+        width:200px;
+        height:auto;
+    }
+
+    h1{
+        margin-bottom:10px;
+        margin-top: 10px;
+    }
+
+    h2{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
+   
+
+    .chris{
+        font-size: 10px;
+    }
+
+    .chris-title{
+        font-size: 40px;
+    }
+
+    .chris-title2{
+        font-size: 35px;
+        line-height: 1em;
     }
 
     .right-column{
         justify-content: center;
+        font-size: 100%;
+        
     }
+
+   /*  #preview2{
+        margin-right:50px;
+    } */
+
+    .s1{
+        width:100%;
+    }
+
+    #preview-shadow{
+        width:250px;
+        height:200px;
+    }
+
+    #preview{
+        font-size: 14px;
+        width:250px;
+        height: 200px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+
+    #preview2{
+        font-size: 14px;
+        /* padding-right: 20px; */
+        height: 200px;
+        width: 250px;
+    }
+
+    #preview3{
+        width: 300px;
+        height: 175px;
+
+    }
+
+    .about-me-left{
+        font-size: 14px;
+    }
+
+    .about-me-right{
+        font-size: 14px;
+    }
+
+    #typography{
+        width:60%;
+        height: 60%;
+
+    }
+
+    #nexus-left{
+        width: 100%;
+        height: 100%;
+    }
+
+    ul{
+        list-style: none;
+        padding-right: 40px;
+    }
+  
 }
